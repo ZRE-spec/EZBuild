@@ -6,8 +6,8 @@ const terminalLines = [
   { text: "Loading build protocols...", delay: 2400 },
   { text: "Build guide ready.", delay: 3600, success: true },
   { text: "> Step 1: Install CPU", delay: 4800, highlight: true },
-  { text: "> Step 2: Mount CPU Cooler", delay: 5600, highlight: true },
-  { text: "> Step 3: Install RAM modules", delay: 6400, highlight: true },
+  { text: "> Step 2: Install RAM modules", delay: 5600, highlight: true },
+  { text: "> Step 3: Mount CPU Cooler", delay: 6400, highlight: true },
 ];
 
 const TerminalAnimation = () => {
