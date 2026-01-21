@@ -15,7 +15,7 @@ export const generateMockSteps = (): BuildStep[] => [
   {
     id: 3,
     title: "Install the CPU",
-    instruction: "Open the CPU socket lever on your motherboard. Align the golden triangle on your CPU with the triangle on the socket. Gently place the CPU—do not force it. Close the lever to secure.",
+    instruction: "Open the CPU socket lever on your motherboard. Align the golden triangle on your CPU with the triangle on the socket. Gently place the CPU - do not force it. Close the lever to secure.",
     warning: "Never touch the CPU pins or socket contacts. Handle by the edges only.",
   },
   {
@@ -42,7 +42,7 @@ export const generateMockSteps = (): BuildStep[] => [
   {
     id: 8,
     title: "Mount the motherboard",
-    instruction: "Lower the motherboard into the case at an angle, aligning the rear ports with the I/O shield. Secure with the provided screws—don't overtighten.",
+    instruction: "Lower the motherboard into the case at an angle, aligning the rear ports with the I/O Shield. Secure with the provided screws - don't overtighten.",
   },
   {
     id: 9,

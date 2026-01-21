@@ -17,7 +17,7 @@ const About = () => {
                 Building a PC shouldn't require hunting for PDFs, scanning QR codes that lead to dead links, or piecing together instructions from five different sources.
               </p>
               <p className="leading-relaxed">
-                <span className="text-foreground font-mono">EZBuild</span> generates a clear, ordered build guide based on your specific components—so you can focus on building, not searching.
+                <span className="text-foreground font-mono">EZBuild</span> generates a clear, ordered build guide based on your specific components - so you can focus on building, not searching.
               </p>
               <p className="text-sm text-primary font-mono">
                 Built for ease.
