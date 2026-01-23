@@ -55,7 +55,7 @@ const BuildLoadingScreen: React.FC<BuildLoadingScreenProps> = ({
           return Math.min(prev + 0.5, 99); // Very slow toward 100%
         }
       });
-    }, 150);
+    }, 300);
 
     return () => clearInterval(progressInterval);
   }, [isVisible, isComplete]);
@@ -66,7 +66,7 @@ const BuildLoadingScreen: React.FC<BuildLoadingScreenProps> = ({
 
     const statusInterval = setInterval(() => {
       setStatusIndex((prev) => (prev + 1) % STATUS_MESSAGES.length);
-    }, 1000);
+    }, 2000);
 
     return () => clearInterval(statusInterval);
   }, [isVisible, isComplete]);
@@ -84,7 +84,7 @@ const BuildLoadingScreen: React.FC<BuildLoadingScreenProps> = ({
 
   // Check completion conditions
   useEffect(() => {
-    if (!isVisible || elapsedTime < 2.5) return;
+    if (!isVisible || elapsedTime < 5) return;
 
     // Both conditions met: minimum time elapsed and we're ready
     setProgress(100);
