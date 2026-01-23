@@ -44,7 +44,7 @@ const BuildInput = () => {
   };
 
   const handleSubmit = () => {
-    if (!config.platform) return;
+    if (!config.platform || !config.cooling || !config.caseType) return;
     sessionStorage.setItem("buildConfig", JSON.stringify(config));
     navigate("/guide");
   };
@@ -199,7 +199,7 @@ const BuildInput = () => {
               variant="hero" 
               size="lg" 
               className="w-full font-mono group"
-              disabled={!config.platform}
+              disabled={!config.platform || !config.cooling || !config.caseType}
             >
               <span>Generate My Build Guide</span>
             </Button>
