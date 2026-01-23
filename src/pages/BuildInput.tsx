@@ -131,14 +131,6 @@ const BuildInput = () => {
 
           {/* Optional Details Section */}
           <div className="mb-12">
-            <h2 className="font-mono text-lg font-bold text-foreground mb-1 flex items-center gap-2">
-              <Building2 className="h-4 w-4 text-primary" />
-              Optional Details
-            </h2>
-            <p className="text-sm text-muted-foreground font-mono mb-6">
-              <span className="text-primary">{">"}</span> These do not change the core steps, but we use them to give better tips.
-            </p>
-
             {/* Cooling Type */}
             <div className="mb-6">
               <p className="text-sm font-mono font-semibold text-foreground mb-3">Cooling Type</p>
@@ -152,7 +144,6 @@ const BuildInput = () => {
                       : "border-muted-foreground/30"
                   }`}
                 >
-                  <Flame className="h-4 w-4 mr-2" />
                   <span className="font-mono text-sm">Air Cooler</span>
                 </Toggle>
 
@@ -165,7 +156,6 @@ const BuildInput = () => {
                       : "border-muted-foreground/30"
                   }`}
                 >
-                  <Zap className="h-4 w-4 mr-2" />
                   <span className="font-mono text-sm">Liquid Cooler (AIO)</span>
                 </Toggle>
               </div>
@@ -184,7 +174,6 @@ const BuildInput = () => {
                       : "border-muted-foreground/30"
                   }`}
                 >
-                  <Box className="h-4 w-4 mr-2" />
                   <span className="font-mono text-sm">Standard Case</span>
                 </Toggle>
 
@@ -197,7 +186,6 @@ const BuildInput = () => {
                       : "border-muted-foreground/30"
                   }`}
                 >
-                  <Building2 className="h-4 w-4 mr-2" />
                   <span className="font-mono text-sm">Compact Case</span>
                 </Toggle>
               </div>
@@ -214,7 +202,6 @@ const BuildInput = () => {
               disabled={!config.platform}
             >
               <span>Generate My Build Guide</span>
-              <Cpu className="ml-2 h-4 w-4 group-hover:rotate-90 transition-transform duration-300" />
             </Button>
             <p className="text-xs font-mono text-muted-foreground text-center mt-3">
               You will get a step by step guide tailored to your platform.
