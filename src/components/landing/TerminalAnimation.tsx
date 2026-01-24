@@ -109,7 +109,9 @@ const TerminalAnimation = forwardRef<TerminalAnimationHandle>((_, ref) => {
           {[...baseLines.slice(0, baseVisible), ...extraLines].map((line, index) => (
             <div
               key={`${line.text}-${index}`}
-              className={`flex items-center gap-2 animate-fade-in ${
+              className={`flex items-center gap-2 ${
+                line.danger ? "" : "animate-fade-in"
+              } ${
                 line.danger
                   ? "text-destructive"
                   : line.highlight
@@ -132,9 +134,13 @@ const TerminalAnimation = forwardRef<TerminalAnimationHandle>((_, ref) => {
           ))}
 
           {typingLine && (
-            <div className={`flex items-center gap-2 animate-fade-in ${
-              typingLine.danger ? "text-destructive" : "text-muted-foreground"
-            }`}>
+            <div
+              className={`flex items-center gap-2 ${
+                typingLine.danger ? "" : "animate-fade-in"
+              } ${
+                typingLine.danger ? "text-destructive" : "text-muted-foreground"
+              }`}
+            >
               <span className={typingLine.danger ? "text-destructive/50" : "text-muted-foreground/50"}>[sys]</span>
               <span>{typedText}</span>
             </div>
