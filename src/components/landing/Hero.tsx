@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import TerminalAnimation from "./TerminalAnimation";
+import TerminalAnimation, { type TerminalAnimationHandle } from "./TerminalAnimation";
+import { forwardRef } from "react";
 
-const Hero = () => {
+const Hero = forwardRef<TerminalAnimationHandle>((_, ref) => {
   return (
     <section className="relative py-16 sm:py-24 lg:py-32 overflow-hidden">
       {/* Background effects */}
@@ -42,13 +43,15 @@ const Hero = () => {
           </div>
           
           {/* Right side - Terminal */}
-          <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <TerminalAnimation />
+          <div>
+            <TerminalAnimation ref={ref} />
           </div>
         </div>
       </div>
     </section>
   );
-};
+});
+
+Hero.displayName = "Hero";
 
 export default Hero;

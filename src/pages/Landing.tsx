@@ -1,17 +1,19 @@
 import Layout from "@/components/layout/Layout";
 import Hero from "@/components/landing/Hero";
-import HowItWorks from "@/components/landing/HowItWorks";
-import About from "@/components/landing/About";
 import { Terminal } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
+import type { TerminalAnimationHandle } from "@/components/landing/TerminalAnimation";
 
 const Landing = () => {
-  const [showAbout, setShowAbout] = useState(false);
+  const terminalRef = useRef<TerminalAnimationHandle>(null);
 
   useEffect(() => {
     const handleHashChange = () => {
       if (window.location.hash === "#about") {
-        setShowAbout(true);
+        terminalRef.current?.addLine(
+          "This tool generates a clear, step by step build guide tailored to your setup",
+          { danger: true }
+        );
       }
     };
 
@@ -29,12 +31,7 @@ const Landing = () => {
   return (
     <Layout>
       <div className="grain flex-1">
-        <Hero />
-        {showAbout && (
-          <div className="animate-fade-in">
-            <About />
-          </div>
-        )}
+        <Hero ref={terminalRef} />
       </div>
       
       {/* Footer */}

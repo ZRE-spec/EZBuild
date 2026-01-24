@@ -8,7 +8,7 @@ const About = () => {
         
         <div className="relative">
           {/* Card with glow */}
-          <div className="p-8 rounded-lg bg-card/50 border border-border relative overflow-hidden">
+          <div className="p-8 rounded-lg bg-background border border-border relative overflow-hidden">
             {/* Scanline effect */}
             <div className="absolute inset-0 scanlines opacity-30" />
             
@@ -19,9 +19,7 @@ const About = () => {
               <p className="leading-relaxed">
                 <span className="text-foreground font-mono">EZBuild</span> generates a clear, ordered build guide based on your specific components - so you can focus on building, not searching.
               </p>
-              <p className="text-sm text-primary font-mono">
-                Built for ease.
-              </p>
+
             </div>
           </div>
         </div>
