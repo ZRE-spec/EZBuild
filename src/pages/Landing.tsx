@@ -11,7 +11,7 @@ const Landing = () => {
     const handleHashChange = () => {
       if (window.location.hash === "#about") {
         terminalRef.current?.addLine(
-          "This tool generates a clear, step by step build guide tailored to your setup",
+          "This tool generates a clear, step by step build guide tailored to your setup.",
           { danger: true }
         );
       }
@@ -40,8 +40,6 @@ const Landing = () => {
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground font-mono">
             <Terminal className="h-4 w-4 text-primary" />
             <span>© 2026 EZBuild</span>
-            <span className="text-primary">|</span>
-            <span>Built for builders</span>
           </div>
         </div>
       </footer>
