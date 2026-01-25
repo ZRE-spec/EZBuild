@@ -21,7 +21,9 @@ const Hero = forwardRef<TerminalAnimationHandle>((_, ref) => {
           {/* Left side - Content */}
           <div className="text-center lg:text-left">
             <h1 className="font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-fade-in">
-              <span className="text-glow-primary text-primary">Build Your PC</span>
+              <span className="text-glow-primary text-primary">Build Your PC With Ease.
+              
+              </span>
               <br />
               <span className="text-muted-foreground">No Manuals</span>
               <br />
