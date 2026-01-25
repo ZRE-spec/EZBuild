@@ -9,7 +9,7 @@ type TerminalLine = {
 };
 
 const baseLines: TerminalLine[] = [
-  { text: "Initializing EZBuild v2.0...", delay: 0 },
+  { text: "Initializing EZBuild...", delay: 0 },
   { text: "Scanning component database...", delay: 1200 },
   { text: "Loading build protocols...", delay: 2400 },
   { text: "Build guide ready.", delay: 3600, success: true },
